@@ -134,6 +134,25 @@ header {
   color: var(--accent-color);
 }
 
+.site-contacts .item::before {
+  display: flex;
+  border-radius: 4px;
+
+  content: "";
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.site-contacts .icon-envelope::before {
+  background-image: url(../images/envelope.svg);
+}
+
+.site-contacts .icon-phone::before {
+  background-image: url(../images/smartphone.svg);
+}
+
 /* ----------------- SECTIONS ------------------- */
 .section {
   padding-top: 94px;
@@ -170,6 +189,22 @@ header {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.hero-overlay {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* ----------------- Section FEATURES ------------------- */
@@ -216,6 +251,35 @@ header {
   margin-bottom: 0;
 }
 
+.list-item::before {
+  display: block;
+  background-color: var(--bg-color-primary);
+  border-radius: 4px;
+  margin-bottom: 30px;
+
+  content: "";
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-satellite::before {
+  background-image: url(../images/sat.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon-graph::before {
+  background-image: url(../images/graph.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+
 /* WORKS */
 .work-list {
   display: flex;
@@ -252,6 +316,8 @@ header {
 .team-list .item {
   margin: 0 30px 30px 0;
   border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-list .item:nth-child(4n) {
@@ -324,6 +390,8 @@ header {
 .button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ----------------- PORTFOLIO PAGE ------------------- */
@@ -378,6 +446,16 @@ header {
   margin-bottom: 0;
 }
 
+.flex-element:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* ----------------- CLIENTS ------------------- */
+.client-list {
+  display: flex;
+  gap: 30px;
+}
 /* ----------------- FOOTER ------------------- */
 footer {
   background-color: var(--bg-color-secondary);
@@ -405,6 +483,10 @@ footer .link {
   text-decoration: none;
 }
 
+footer .container {
+  display: flex;
+}
+
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
   color: var(--accent-color);
@@ -420,4 +502,48 @@ address li {
 
 address li:last-of-type {
   margin-bottom: 0;
+}
+
+.social {
+  margin-left: 70px;
+  margin-top: 12px;
+}
+
+.social-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  color: var(--white-color);
+}
+
+.social-icon-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.social-icon {
+  background-color: var(--bg-color-primary);
+  border-radius: 50%;
+  margin-bottom: 30px;
+  height: 44px;
+  width: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color-primary);
+}
+
+.icon-img {
+  width: 20px;
+  height: 20px;
 }
